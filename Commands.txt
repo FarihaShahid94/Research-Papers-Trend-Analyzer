@@ -1,0 +1,31 @@
+TO START THE ZOOKEEPER
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+TO START THE KAFKA 
+bin\windows\kafka-server-start.bat config\server.properties
+
+TO SEE THE TOPICS
+bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+bin\windows\kafka-topics.bat --describe --topic arxiv-papers --bootstrap-server localhost:9092
+
+HADOOP COMMANDS 
+
+jps 
+hdfs namenode -format
+start-all.cmd
+stop-all.cmd
+
+
+FOR PYSPARK
+GO TO PYSPARK BIN FOLDER AND RUN pyspark 
+use spark-submit FILENAME
+C:\Users\DELL\OneDrive\Desktop\Desktop\University\BigData\Project\Producer_apitokafka.py
+C:\Users\DELL\OneDrive\Desktop\Desktop\University\BigData\Project\Producer_apitoxml.py
+C:\Users\DELL\OneDrive\Desktop\Desktop\University\BigData\Project\Producer_xmltokafka.py
+
+C:\Users\DELL\OneDrive\Desktop\Desktop\University\BigData\Project\Consumer.py
+
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 C:\Users\DELL\OneDrive\Desktop\Desktop\University\BigData\Project\Consumer.py
+
+!!Remember to include jar of kafka other wise prone to errors
